@@ -1,9 +1,4 @@
 {
-  "functions": {
-    "api/chatbot.py": {
-      "runtime": "python@3.9"
-    }
-  },
   "routes": [
     { "src": "/chat", "dest": "/api/chatbot.py" },
     { "src": "/", "dest": "/index.html" }
