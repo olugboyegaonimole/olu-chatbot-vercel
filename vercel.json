@@ -1,6 +1,0 @@
-{
-  "routes": [
-    { "src": "/chat", "dest": "/api/chatbot.py" },
-    { "src": "/", "dest": "/index.html" }
-  ]
-}

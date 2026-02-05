@@ -20,7 +20,6 @@
         <button onclick="sendMessage()">Send</button>
     </div>
 
-
 <script>
 async function sendMessage() {
     let userInput = document.getElementById("user-input").value;
@@ -38,7 +37,8 @@ async function sendMessage() {
     chatBox.appendChild(waitingMessage);
 
     try {
-        let response = await fetch("/chat", {
+        // Minimal change: point to the new Render backend
+        let response = await fetch("https://olu-chatbot-render.onrender.com/chat", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ message: userInput })
@@ -61,8 +61,5 @@ document.getElementById("user-input").addEventListener("keypress", function(even
 });
 </script>
 
-
-
 </body>
 </html>
-
